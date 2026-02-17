@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+
 const skills = [
   {
     title: "Frontend",
@@ -20,9 +21,9 @@ const skills = [
     rotate: "-rotate-2",
     accent: "bg-[#fff3c4]",
     decor: {
-      src: "/Frame 14.png",
-      position: "-top-20 -right-10",
-      size: 120,
+      src: "/icons/Frame 13.png",
+      position: "-bottom-12 -right-16",
+      size: 60,
     },
   },
   {
@@ -64,7 +65,6 @@ const skills = [
   {
     title: "Tools & Platforms",
         icon: "/skill4.png",
-
     items: [
       "Git",
       "GitHub",
