@@ -16,7 +16,7 @@ export default function Navbar() {
 
       {/* TOP RIGHT */}
       <Image
-        src="/vector.png"
+        src="/Vector.png"
         alt="decor-right"
         width={90}
         height={90}
