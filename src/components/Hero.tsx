@@ -22,33 +22,34 @@ export default function Hero() {
         className="absolute top-10 left-34 ml-18 rotate-[-12deg] z-0" />
 
       {/* HERO CONTENT */}
-      <section className="max-w-6xl mx-auto px-6 mt-10 relative z-10">
+      <section id="home" className="max-w-6xl mx-auto px-6 mt-10 relative z-10 scroll-mt-36">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
           {/* LEFT CONTENT */}
 <div>
   <p className="mb-1 text-sm font-medium tracking-wide">
-    ✦ HELLO, I’M JASLEEN
+    ✦ HELLO, I&apos;M JASLEEN — DEVELOPER &amp; AI/ML PRACTITIONER
   </p>
 
   <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-    I design ✍️ top <br />
-    notch{" "}
+    I build intelligent <br />
+    digital{" "}
     <span className="bg-yellow-300 px-2">
-      websites
+      experiences
     </span>
   </h1>
 
   <p className="mt-4 max-w-md text-base text-gray-800">
-    Full-stack developer crafting beautiful, scalable
-    web applications with design and AI at the core.
+    Exploring the intersection of full-stack development and AI/ML
+    to build useful, scalable, and impactful products.
   </p>
 
   <p className="mt-3 text-sm text-gray-700">
-    React • Next.js • Node.js • Python • AI/ML • UI/UX
+    Full-Stack • Machine Learning • LLMs • NLP • Problem Solving
   </p>
 
-  <button
+  <a
+  href="#work"
   className="
     inline-flex items-center justify-center
     mt-4
@@ -62,7 +63,7 @@ export default function Hero() {
   "
 >
   Explore My Work
-</button>
+</a>
 
 </div>
 

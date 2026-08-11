@@ -33,20 +33,24 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Portfolio",
-    description: "A visually driven personal portfolio showcasing my projects, skills, and design philosophy, built with a strong focus on clean layouts, smooth interactions, and responsive user experience across devices.",
-    image: "/projects/port2.png",
+    title: "Offline Multimodal Vision Chatbot",
+    description: "A privacy-focused, fully offline RAG chatbot that understands both text and images by coordinating specialized vision and language models with decentralized data storage.",
+    image: "/projects/chatbot-home.png",
     techStack: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
+      "Python",
+      "Llama 2",
+      "RAG",
+      "VGG16",
+      "BLIP",
+      "CLIP",
+      "FAISS",
+      "IPFS",
+      "Streamlit",
     ],
     images: [
-      "/projects/port2.png",
-      "/projects/portfo2lio-.png",
+      "/projects/chatbot-home.png",
+      "/projects/chatbot-inference.png",
+      "/projects/chatbot-architecture.png",
     ],
   },
   {
@@ -69,20 +73,20 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "EVOGYM",
-    description: "A modern fitness platform designed to promote an active lifestyle, featuring bold visuals, workout programs, and an engaging interface focused on motivation, performance, and user-friendly navigation.",
-    image: "/projects/port4.png",
+    title: "Stress, Affect & Activity Recognition",
+    description: "A cross-dataset deep-learning framework that recognizes stress, emotion, cognitive load, and physical activity from multimodal wearable-sensor data.",
+    image: "/projects/stress-habc.svg",
     techStack: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "CNN",
+      "BiLSTM",
+      "Attention",
+      "Scikit-learn",
     ],
     images: [
-      "/projects/port4.png",
-      "/projects/evo1.png",
+      "/projects/stress-habc.svg",
     ],
   },
   // {
@@ -120,7 +124,7 @@ export default function Projects() {
   ];
 
 return (
-  <section className="w-full min-h-screen bg-[#faf8e8] flex flex-col items-center py-20">
+  <section id="work" className="w-full min-h-screen bg-[#faf8e8] flex flex-col items-center pt-10 pb-20 scroll-mt-36">
 
     {/* 🔥 HEADING AT TOP CENTER */}
     <div className="flex items-center justify-center gap-4 mb-1">

@@ -63,7 +63,7 @@ export default function ProjectCard({
             alt={title}
             fill
             className="
-              object-contain
+              object-cover
               transition-all duration-300
               group-hover:scale-[1.04]
               group-hover:blur-[2px]

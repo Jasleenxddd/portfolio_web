@@ -21,7 +21,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full flex justify-center py-24 bg-[#faf8e8]">
+    <section id="contact" className="w-full flex justify-center py-24 bg-[#faf8e8] scroll-mt-36">
       {/* FRAME */}
       <div className="relative max-w-4xl w-full">
         {/* SHADOW */}

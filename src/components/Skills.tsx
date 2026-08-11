@@ -9,11 +9,8 @@ const skills = [
     items: [
       "React",
       "Next.js",
-      "Vue",
       "TypeScript",
       "JavaScript",
-      "Redux",
-      "Material UI",
       "Tailwind CSS",
       "HTML",
       "CSS",
@@ -27,7 +24,7 @@ const skills = [
     },
   },
   {
-    title: "Backend",
+    title: "Backend & Data",
         icon: "/skill2.png",
 
     items: [
@@ -35,11 +32,11 @@ const skills = [
       "Express",
       "MongoDB",
       "PostgreSQL",
-      "Firebase",
+      "FAISS",
       "REST APIs",
       "WebSockets",
       "Socket.IO",
-      "Authentication",
+      "JWT Authentication",
     ],
     rotate: "rotate-2",
     accent: "bg-[#e7f2ff]",
@@ -50,39 +47,55 @@ const skills = [
     },
   },
   {
-    title: "Languages & ML",
+    title: "AI & Machine Learning",
         icon: "/skill3.png",
 
-    items: ["C++", "Python", "NumPy", "TensorFlow"],
+    items: [
+      "Machine Learning",
+      "Deep Learning",
+      "NLP",
+      "LLMs",
+      "RAG",
+      "LangChain",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "XGBoost",
+      "NumPy",
+      "Prompt Engineering",
+    ],
     rotate: "-rotate-1",
     accent: "bg-[#e9fbe7]",
     decor: {
       src: "/staruu2.png",
-      position: "-bottom-8 -left-5",
+      position: "-top-18 -left-14",
       size: 120,
     },
   },
   {
-    title: "Tools & Platforms",
+    title: "Languages & Engineering",
         icon: "/skill4.png",
     items: [
+      "C++",
+      "Python",
+      "Java",
       "Git",
       "GitHub",
-      "npm",
-      "Docker",
-      "Linux",
-      "AWS",
-      "Vercel",
-      "Netlify",
       "Postman",
-      "VS Code",
+      "Firebase",
+      "Vercel",
+      "AWS Bedrock",
+      "Data Structures",
+      "OOP",
+      "System Design",
     ],
     rotate: "rotate-1",
     accent: "bg-[#f3e8ff]",
     decor: {
-      src: "/Frame 18.png",
+      src: "/icons/Frame 13.png",
       position: "-bottom-16 -left-12",
-      size: 110,
+      size: 60,
+      rotate: "rotate-1",
     },
   },
 ];
@@ -90,7 +103,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="w-full bg-[#faf8e8] py-28">
+    <section className="w-full bg-[#faf8e8] pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADING */}
         <div className="text-center mb-20">

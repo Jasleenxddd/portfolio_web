@@ -1,6 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+
+type Section = "home" | "work" | "contact";
+
+const navItems: { label: string; section: Section }[] = [
+  { label: "Home", section: "home" },
+  { label: "Portfolio", section: "work" },
+  { label: "Hire Me", section: "contact" },
+];
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState<Section>("home");
+
   return (
     <>
       {/* ===== SCREEN CORNER DECORATIONS ===== */}
@@ -24,7 +37,7 @@ export default function Navbar() {
       />
 
       {/* ===== NAVBAR ===== */}
-      <nav className="w-full flex justify-center mt-12 mb-12 relative z-10">
+      <nav className="fixed top-8 left-0 w-full flex justify-center z-50">
         <div className="relative">
 
           {/* RIGHT SHADOW LINE */}
@@ -49,18 +62,32 @@ export default function Navbar() {
 
             {/* LINKS */}
             <div className="flex items-center text-xl">
-              <span className="px-8 py-4 border-r-4 border-black">About </span>
-              <span className="px-8 py-4 border-r-4 border-black bg-yellow-300 font-semibold">
-                Portfolio
-              </span>
-              <span className="px-8 py-4">Hire Me</span>
+              {navItems.map((item, index) => (
+                <a
+                  key={item.section}
+                  href={`#${item.section}`}
+                  onClick={() => setActiveSection(item.section)}
+                  className={`px-8 py-4 transition-colors hover:bg-yellow-100 ${
+                    index < navItems.length - 1 ? "border-r-4 border-black" : ""
+                  } ${
+                    activeSection === item.section
+                      ? "bg-yellow-300 font-semibold"
+                      : "bg-white"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </nav>
 
+      {/* SPACE RESERVED FOR THE FIXED NAVBAR */}
+      <div className="h-32" aria-hidden="true" />
+
       {/* PAGE DIVIDER */}
-      <div className="w-full mt-10 h-[4px] bg-black" />
+      <div className="w-full mt-4 h-[4px] bg-black" />
     </>
   );
 }

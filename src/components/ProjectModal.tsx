@@ -41,14 +41,16 @@ export default function ProjectModal({ project, onClose }: Props) {
       ],
     },
 
-    Portfolio: {
-      description: `A personal portfolio website built to showcase full-stack development expertise, creative UI design, and modern frontend practices. It highlights projects, skills, and achievements using clean layouts, smooth interactions, and a consistent visual identity.`,
+    "Offline Multimodal Vision Chatbot": {
+      description: `A fully offline, privacy-focused multimodal chatbot that accepts text and image prompts without relying on a vision LLM. It coordinates specialized models for image captioning, classification, semantic alignment, retrieval, and response generation, while IPFS supports decentralized document storage.`,
       features: [
-        "Modern and minimal portfolio layout",
-        "Responsive design across all screen sizes",
-        "Project showcase with interactive previews",
-        "Built using Next.js and Tailwind CSS",
-        "Optimized performance and accessibility",
+        "Runs locally on CPU for private, offline inference",
+        "Uses RAG with FAISS for document-grounded responses",
+        "Processes images through BLIP, VGG16, and CLIP",
+        "Uses threshold-based routing across specialized models",
+        "Generates responses with a local Llama 2 7B model",
+        "Supports decentralized document storage through IPFS",
+        "Provides a Streamlit interface for text and image prompts",
       ],
     },
 
@@ -63,14 +65,16 @@ export default function ProjectModal({ project, onClose }: Props) {
       ],
     },
 
-    EVOGYM: {
-      description: `EVOGYM is a fitness-focused web platform that provides workout guidance and personalized fitness experiences. It combines bold visuals with a user-friendly interface to keep users motivated and engaged.`,
+    "Stress, Affect & Activity Recognition": {
+      description: `A B.Tech research project introducing HABC, a parallel CNN-BiLSTM architecture with attention. It learns localized signal patterns and long-range temporal dependencies from wearable and multimodal sensor data to recognize stress, affect, cognitive load, and physical activity.`,
       features: [
-        "Workout guidance and fitness programs",
-        "Clean and bold UI design",
-        "Fully responsive layout",
-        "Built with React and Tailwind CSS",
-        "Performance-optimized frontend",
+        "Evaluated across WESAD, MUSE, SWELL-KW, and UTD-MHAD",
+        "Achieved 96.63% accuracy on WESAD stress classification",
+        "Achieved 95.29% accuracy on MUSE emotion recognition",
+        "Achieved 98.78% accuracy on SWELL-KW cognitive-load classification",
+        "Achieved 93.33% accuracy on 27-class UTD-MHAD activity recognition",
+        "Combined parallel CNN and attention-based BiLSTM branches",
+        "Distinguished psychological stress from physical exertion",
       ],
     },
   };
@@ -130,27 +134,33 @@ export default function ProjectModal({ project, onClose }: Props) {
               />
             </div>
 
-            <button
-              onClick={() =>
-                setIndex((i) =>
-                  i === 0 ? images.length - 1 : i - 1
-                )
-              }
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
-            >
-              <ChevronLeft size={18} />
-            </button>
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={() =>
+                    setIndex((i) =>
+                      i === 0 ? images.length - 1 : i - 1
+                    )
+                  }
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
+                  aria-label="Previous project image"
+                >
+                  <ChevronLeft size={18} />
+                </button>
 
-            <button
-              onClick={() =>
-                setIndex((i) =>
-                  i === images.length - 1 ? 0 : i + 1
-                )
-              }
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
-            >
-              <ChevronRight size={18} />
-            </button>
+                <button
+                  onClick={() =>
+                    setIndex((i) =>
+                      i === images.length - 1 ? 0 : i + 1
+                    )
+                  }
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
+                  aria-label="Next project image"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </>
+            )}
           </div>
 
           {/* CONTENT */}
