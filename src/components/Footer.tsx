@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Code2, FileText, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -23,8 +23,9 @@ export default function Footer() {
         {/* CENTER — Social Icons */}
         <div className="flex items-center gap-6">
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/jasleen-kaur-p"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition"
             aria-label="LinkedIn"
           >
@@ -32,8 +33,9 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Jasleenxddd"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition"
             aria-label="GitHub"
           >
@@ -41,11 +43,31 @@ export default function Footer() {
           </a>
 
           <a
-            href="mailto:yourmail@gmail.com"
+            href="https://leetcode.com/u/Jasleenxddd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition"
+            aria-label="LeetCode"
+          >
+            <Code2 size={20} />
+          </a>
+
+          <a
+            href="mailto:jasleenkaurvasir@gmail.com"
             className="hover:scale-110 transition"
             aria-label="Email"
           >
             <Mail size={20} />
+          </a>
+
+          <a
+            href="/Jasleen-Kaur-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition"
+            aria-label="View résumé"
+          >
+            <FileText size={20} />
           </a>
         </div>
 

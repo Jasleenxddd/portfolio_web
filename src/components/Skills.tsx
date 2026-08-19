@@ -7,13 +7,15 @@ const skills = [
         icon: "/skill1.png",
 
     items: [
-      "React",
+      "React.js",
       "Next.js",
+      "Vite",
       "TypeScript",
       "JavaScript",
       "Tailwind CSS",
-      "HTML",
-      "CSS",
+      "Material UI",
+      "Chakra UI",
+      "Framer Motion",
     ],
     rotate: "-rotate-2",
     accent: "bg-[#fff3c4]",
@@ -103,10 +105,10 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="w-full bg-[#faf8e8] pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full overflow-hidden bg-[#faf8e8] pb-12 pt-16 sm:pt-24">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* HEADING */}
-        <div className="text-center mb-20">
+        <div className="mb-12 text-center sm:mb-20">
           <h2 className="text-4xl md:text-6xl font-extrabold underline underline-offset-8">
             My Toolbox
           </h2>
@@ -117,13 +119,13 @@ export default function Skills() {
         </div>
 
         {/* SKILL CARDS */}
-<div className="grid md:grid-cols-2 gap-14 place-items-center">
+<div className="grid gap-10 place-items-center md:grid-cols-2 md:gap-14">
   {skills.map((group) => (
     <div
       key={group.title}
       className={`
         relative
-        w-full max-w-sm
+        w-[calc(100%-12px)] max-w-sm
         ${group.accent}
         border-[4px] border-black
         p-6

@@ -17,7 +17,7 @@ export default function ProjectCard({
     <div
       className="
         relative
-        w-[580px] h-[300px]
+        w-full aspect-[29/15]
         cursor-pointer
         group
       "
@@ -84,12 +84,12 @@ export default function ProjectCard({
 >
   {/* CONTENT */}
   <div className="mt-2">
-    <h4 className="inline-block text-white font-bold text-3xl tracking-tight border-b-2 border-white pb-0">
+    <h4 className="inline-block border-b-2 border-white pb-0 text-xl font-bold tracking-tight sm:text-3xl">
   {title}
 </h4>
 
 
-    <p className="text-white/90 text-sm mt-3 pr-5 leading-relaxed max-w-[90%]">
+    <p className="mt-2 line-clamp-3 max-w-[95%] pr-2 text-xs leading-relaxed text-white/90 sm:mt-3 sm:text-sm">
       {description}
     </p>
 

@@ -10,6 +10,12 @@ body {
   font-family: var(--font-space-grotesk);
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

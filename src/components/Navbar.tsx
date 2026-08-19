@@ -37,8 +37,8 @@ export default function Navbar() {
       />
 
       {/* ===== NAVBAR ===== */}
-      <nav className="fixed top-8 left-0 w-full flex justify-center z-50">
-        <div className="relative">
+      <nav className="fixed left-0 top-3 z-50 flex w-full justify-center px-3 sm:top-6">
+        <div className="relative w-full max-w-4xl">
 
           {/* RIGHT SHADOW LINE */}
           <div className="absolute top-[3px] left-full h-full w-[6px] bg-[rgba(0,0,0,0.35)]" />
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="absolute left-[3px] top-full w-full h-[6px] bg-[rgba(0,0,0,0.35)]" />
 
           {/* MAIN NAVBAR */}
-          <div className="relative flex items-center border-4 border-black bg-white">
+          <div className="relative flex items-stretch border-[3px] border-black bg-white sm:border-4">
 
             {/* CORNER BOXES */}
             <span className="absolute -top-2 -left-2 w-3 h-3 bg-[#fbf9e9] border-3" />
@@ -56,18 +56,18 @@ export default function Navbar() {
             <span className="absolute -bottom-2 -right-2 w-3 h-3 bg-[#fbf9e9] border-3 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.35)]" />
 
             {/* LOGO */}
-            <div className="px-38 pl-6 py-4 border-r-4 border-black font-bold text-xl">
+            <div className="hidden shrink-0 items-center border-r-4 border-black px-5 py-3 text-lg font-bold sm:flex lg:px-8 lg:text-xl">
               ✦ fy.dev
             </div>
 
             {/* LINKS */}
-            <div className="flex items-center text-xl">
+            <div className="grid min-w-0 flex-1 grid-cols-3 text-sm sm:text-base lg:text-xl">
               {navItems.map((item, index) => (
                 <a
                   key={item.section}
                   href={`#${item.section}`}
                   onClick={() => setActiveSection(item.section)}
-                  className={`px-8 py-4 transition-colors hover:bg-yellow-100 ${
+                  className={`flex items-center justify-center whitespace-nowrap px-2 py-3 text-center transition-colors hover:bg-yellow-100 sm:px-5 sm:py-4 lg:px-8 ${
                     index < navItems.length - 1 ? "border-r-4 border-black" : ""
                   } ${
                     activeSection === item.section
@@ -84,7 +84,7 @@ export default function Navbar() {
       </nav>
 
       {/* SPACE RESERVED FOR THE FIXED NAVBAR */}
-      <div className="h-32" aria-hidden="true" />
+      <div className="h-24 sm:h-32" aria-hidden="true" />
 
       {/* PAGE DIVIDER */}
       <div className="w-full mt-4 h-[4px] bg-black" />

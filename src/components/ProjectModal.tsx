@@ -21,9 +21,10 @@ export default function ProjectModal({ project, onClose }: Props) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    document.body.style.overflow = "auto";
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = previousOverflow;
     };
   }, []);
 
@@ -96,7 +97,7 @@ export default function ProjectModal({ project, onClose }: Props) {
       <button
         onClick={onClose}
         className="
-          fixed top-6 right-6 z-50
+          fixed right-3 top-3 z-[60] sm:right-6 sm:top-6
           bg-white border-2 border-black
           rounded-full p-2
           shadow
@@ -108,13 +109,13 @@ export default function ProjectModal({ project, onClose }: Props) {
       </button>
 
       {/* MODAL */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center px-4 pointer-events-none">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 pointer-events-none sm:p-4">
         <div
           className="
             pointer-events-auto
             relative
             w-full max-w-5xl
-            max-h-[90vh]
+            max-h-[94vh] sm:max-h-[90vh]
             overflow-y-auto
             bg-white
             border-[4px] border-black
@@ -124,7 +125,7 @@ export default function ProjectModal({ project, onClose }: Props) {
         >
           {/* IMAGE CAROUSEL */}
           <div className="relative bg-[#f4f4f4] border-b-[4px] border-black">
-            <div className="relative w-full aspect-[18/9]">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[18/9]">
               <Image
                 src={images[index]}
                 alt={`${project.title} preview`}
@@ -142,7 +143,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                       i === 0 ? images.length - 1 : i - 1
                     )
                   }
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer sm:left-4"
                   aria-label="Previous project image"
                 >
                   <ChevronLeft size={18} />
@@ -154,7 +155,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                       i === images.length - 1 ? 0 : i + 1
                     )
                   }
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-full shadow cursor-pointer sm:right-4"
                   aria-label="Next project image"
                 >
                   <ChevronRight size={18} />
@@ -164,11 +165,11 @@ export default function ProjectModal({ project, onClose }: Props) {
           </div>
 
           {/* CONTENT */}
-          <div className="p-8 space-y-10">
+          <div className="space-y-7 p-5 sm:space-y-10 sm:p-8">
             {/* HEADER */}
             <div className="flex flex-wrap items-start justify-between gap-6">
               <div>
-                <h2 className="text-4xl font-bold">{project.title}</h2>
+                <h2 className="text-2xl font-bold sm:text-4xl">{project.title}</h2>
                 <div className="w-24 h-[3px] bg-black mt-2 mb-4" />
 
                 <p className="text-gray-700 leading-relaxed max-w-3xl">

@@ -124,25 +124,38 @@ export default function Projects() {
   ];
 
 return (
-  <section id="work" className="w-full min-h-screen bg-[#faf8e8] flex flex-col items-center pt-10 pb-20 scroll-mt-36">
+  <section id="work" className="flex w-full min-h-screen flex-col items-center bg-[#faf8e8] px-5 pb-20 pt-10 scroll-mt-28 sm:px-6 sm:scroll-mt-36">
 
     {/* 🔥 HEADING AT TOP CENTER */}
-    <div className="flex items-center justify-center gap-4 mb-1">
-      <h2 className="text-4xl md:text-6xl font-bold underline underline-offset-8">
+    <div className="mb-10 flex items-center justify-center gap-2 sm:gap-4 xl:mb-1">
+      <h2 className="text-center text-4xl font-bold underline underline-offset-8 md:text-6xl">
         My Portfolio
       </h2>
 
       <Image
         src="/Frame 18.png"
         alt="decor"
-        width={80}
-        height={80}
-        className="rotate-12"
+        width={64}
+        height={64}
+        className="hidden rotate-12 sm:block md:h-20 md:w-20"
       />
     </div>
 
     {/* 📌 PROJECT STACK CENTERED BELOW */}
-    <div className="relative w-[1100px] h-[800px] flex items-center justify-center">
+    <div className="grid w-full max-w-3xl gap-8 xl:hidden">
+      {projects.map((project) => (
+        <div key={project.title} className="w-full">
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            onOpen={() => setActiveProject(project)}
+          />
+        </div>
+      ))}
+    </div>
+
+    <div className="relative hidden h-[800px] w-[1100px] items-center justify-center xl:flex">
 
       {projects.map((project, index) => {
         const { x, y, r } = positions[index];
@@ -150,7 +163,7 @@ return (
         return (
           <div
             key={index}
-            className="absolute"
+            className="absolute w-[580px]"
             style={{
               left: "50%",
               top: "50%",

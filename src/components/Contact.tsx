@@ -21,16 +21,16 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full flex justify-center py-24 bg-[#faf8e8] scroll-mt-36">
+    <section id="contact" className="w-full flex justify-center bg-[#faf8e8] px-5 py-16 scroll-mt-28 sm:px-6 sm:py-24 sm:scroll-mt-36">
       {/* FRAME */}
       <div className="relative max-w-4xl w-full">
         {/* SHADOW */}
         <div className="absolute inset-0 translate-x-[10px] translate-y-[10px] bg-black/25" />
 
         {/* CARD */}
-        <div className="relative bg-white border-[4px] border-black p-10">
+        <div className="relative bg-white border-[4px] border-black p-5 sm:p-10">
           {/* STAR (optional decoration) */}
-          <div className="absolute -top-24 right-48 text-pink-400 text-4xl">
+          <div className="absolute -top-20 right-8 hidden text-4xl text-pink-400 sm:block md:right-48">
             <Image
             src="/staruu.png"
       alt="button accent"
@@ -40,7 +40,7 @@ export default function ContactSection() {
           </div>
 
           {/* HEADING */}
-          <h2 className="text-3xl font-bold text-center">
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">
             Let’s start designing your project
           </h2>
 
