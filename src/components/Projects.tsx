@@ -9,7 +9,9 @@ type Project = {
   description: string;
   image: string;
   techStack: string[];
-  images: string[]; // 👈 ADD THIS
+  images: string[];
+  githubUrl: string;
+  liveUrl?: string;
 };
 
 const projects: Project[] = [
@@ -31,6 +33,7 @@ const projects: Project[] = [
       "/projects/picto2.png",
       "/projects/picto3.png",
     ],
+    githubUrl: "https://github.com/Jasleenxddd/image_gen",
   },
   {
     title: "Offline Multimodal Vision Chatbot",
@@ -52,25 +55,30 @@ const projects: Project[] = [
       "/projects/chatbot-inference.png",
       "/projects/chatbot-architecture.png",
     ],
+    githubUrl:
+      "https://github.com/Jasleenxddd/Vision-Decentralized-Offline-Chatbot",
   },
   {
-    title: "Talkative",
-    description: "A real-time chat application that enables secure authentication and instant messaging, built with a responsive interface and a scalable backend to ensure smooth communication and reliable performance.",
-    image: "/projects/port3.png",
+    title: "EvoGym",
+    description: "A responsive fitness platform with smooth navigation, animated interactions, class discovery, membership benefits, and a streamlined contact experience.",
+    image: "/projects/evo-dashboard.png",
     techStack: [
       "React",
       "Vite",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "TypeScript",
       "Tailwind CSS",
+      "Framer Motion",
+      "React Hook Form",
     ],
     images: [
-      "/projects/port3.png",
-      "/projects/talk1.png",
-      "/projects/talk2.png",
-            "/projects/talk3.png",
+      "/projects/evo-dashboard.png",
+      "/projects/evo1.png",
+      "/projects/evo-home-graphic.png",
+      "/projects/evo-benefits.png",
+      "/projects/evo-contact.png",
     ],
+    githubUrl: "https://github.com/Jasleenxddd/EvoGym-fitness-app",
+    liveUrl: "https://evo-gym-fitness-app.vercel.app",
   },
   {
     title: "Stress, Affect & Activity Recognition",
@@ -88,6 +96,7 @@ const projects: Project[] = [
     images: [
       "/projects/stress-habc.svg",
     ],
+    githubUrl: "https://github.com/Jasleenxddd/Stress_detection_model",
   },
   // {
   //   title: "VisionGuard",
@@ -149,6 +158,8 @@ return (
             title={project.title}
             description={project.description}
             image={project.image}
+            githubUrl={project.githubUrl}
+            liveUrl={project.liveUrl}
             onOpen={() => setActiveProject(project)}
           />
         </div>
@@ -175,6 +186,8 @@ return (
               title={project.title}
               description={project.description}
               image={project.image}
+              githubUrl={project.githubUrl}
+              liveUrl={project.liveUrl}
               onOpen={() => setActiveProject(project)}
             />
           </div>

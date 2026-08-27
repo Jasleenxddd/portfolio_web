@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 
 type Project = {
   title: string;
@@ -10,6 +10,8 @@ type Project = {
   image: string;
   techStack: string[];
   images: string[];
+  githubUrl: string;
+  liveUrl?: string;
 };
 
 type Props = {
@@ -55,14 +57,14 @@ export default function ProjectModal({ project, onClose }: Props) {
       ],
     },
 
-    Talkative: {
-      description: `Talkative is a real-time chat application designed for fast and secure communication. It supports user authentication, live messaging, and scalable real-time updates, making it suitable for modern chat-based platforms.`,
+    EvoGym: {
+      description: `EvoGym is a responsive fitness and wellness platform built with React and TypeScript. It combines animated landing-page interactions, smooth navigation, class discovery, membership benefits, and a contact flow in a polished, mobile-friendly experience.`,
       features: [
-        "Real-time messaging using Socket.IO",
-        "Secure user authentication",
-        "Scalable backend architecture",
-        "Responsive and intuitive chat interface",
-        "Efficient data handling with MongoDB",
+        "Responsive layouts across mobile and desktop screens",
+        "Smooth anchor navigation between page sections",
+        "Animated interactions powered by Framer Motion",
+        "Fitness class and membership-benefit discovery",
+        "Validated contact form using React Hook Form",
       ],
     },
 
@@ -209,6 +211,29 @@ export default function ProjectModal({ project, onClose }: Props) {
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-3 border-t-2 border-black pt-6">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-yellow-300 px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5"
+                >
+                  <ExternalLink size={17} aria-hidden="true" />
+                  Visit Live Project
+                </a>
+              )}
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-white px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5"
+              >
+                <Github size={17} aria-hidden="true" />
+                View Code
+              </a>
             </div>
           </div>
         </div>
