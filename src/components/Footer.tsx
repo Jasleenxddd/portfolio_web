@@ -43,7 +43,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://leetcode.com/u/Jasleenxddd/"
+            href="https://leetcode.com/u/jaslleenkaur/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:scale-110 transition"
