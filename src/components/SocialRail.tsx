@@ -13,7 +13,7 @@ const socialLinks = [
   },
   {
     label: "LeetCode",
-    href: "https://leetcode.com/u/Jasleenxddd/",
+    href: "https://leetcode.com/u/jaslleenkaur/",
     icon: Code2,
   },
   {
