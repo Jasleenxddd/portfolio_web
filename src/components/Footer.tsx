@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, FileText, Github, Linkedin, Mail } from "lucide-react";
+import { Code2, FileText, Github, Linkedin, Mail, Trophy } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -50,6 +50,17 @@ export default function Footer() {
             aria-label="LeetCode"
           >
             <Code2 size={20} />
+          </a>
+
+          <a
+            href="https://codeforces.com/profile/DivineSoul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition"
+            aria-label="Codeforces — Expert, rating 1742"
+            title="Codeforces — Expert (1742)"
+          >
+            <Trophy size={20} />
           </a>
 
           <a
