@@ -73,9 +73,6 @@ const projects: Project[] = [
     images: [
       "/projects/evo-dashboard.png",
       "/projects/evo1.png",
-      "/projects/evo-home-graphic.png",
-      "/projects/evo-benefits.png",
-      "/projects/evo-contact.png",
     ],
     githubUrl: "https://github.com/Jasleenxddd/EvoGym-fitness-app",
     liveUrl: "https://evo-gym-fitness-app.vercel.app",
@@ -133,7 +130,7 @@ export default function Projects() {
   ];
 
 return (
-  <section id="work" className="flex w-full min-h-screen flex-col items-center bg-[#faf8e8] px-5 pb-20 pt-10 scroll-mt-28 sm:px-6 sm:scroll-mt-36">
+  <section id="work" className="flex w-full min-h-screen flex-col items-center bg-[#faf8e8] px-5 pb-8 pt-10 scroll-mt-28 sm:px-6 sm:pb-10 sm:scroll-mt-36">
 
     {/* 🔥 HEADING AT TOP CENTER */}
     <div className="mb-10 flex items-center justify-center gap-2 sm:gap-4 xl:mb-1">

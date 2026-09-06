@@ -105,7 +105,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="w-full overflow-hidden bg-[#faf8e8] pb-12 pt-16 sm:pt-24">
+    <section className="w-full overflow-hidden bg-[#faf8e8] pb-12 pt-8 sm:pt-10">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* HEADING */}
         <div className="mb-12 text-center sm:mb-20">

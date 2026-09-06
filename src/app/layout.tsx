@@ -26,21 +26,12 @@ export const metadata: Metadata = {
     description:
       "Full-stack and AI/ML portfolio featuring intelligent products, applied machine learning, NLP, and LLM projects.",
     type: "website",
-    images: [
-      {
-        url: "/profile_pic.png",
-        width: 460,
-        height: 460,
-        alt: "Jasleen Kaur portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jasleen Kaur | Full-Stack & AI/ML",
     description:
       "Full-stack and AI/ML portfolio featuring intelligent products and applied machine learning.",
-    images: ["/profile_pic.png"],
   },
 };
 

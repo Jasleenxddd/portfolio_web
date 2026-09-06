@@ -15,9 +15,9 @@ export default function Home() {
       <SocialRail />
       <Hero />
       <MovingStrip />
-      <Skills />
       <Experience />
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
     </>

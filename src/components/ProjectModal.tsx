@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 type Project = {
   title: string;
@@ -214,25 +214,14 @@ export default function ProjectModal({ project, onClose }: Props) {
             </div>
 
             <div className="flex flex-wrap gap-3 border-t-2 border-black pt-6">
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-yellow-300 px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5"
-                >
-                  <ExternalLink size={17} aria-hidden="true" />
-                  Visit Live Project
-                </a>
-              )}
               <a
-                href={project.githubUrl}
+                href={project.liveUrl ?? project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-white px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-white px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5 hover:bg-neutral-200"
               >
-                <Github size={17} aria-hidden="true" />
-                View Code
+                <ExternalLink size={17} aria-hidden="true" />
+                Visit
               </a>
             </div>
           </div>
