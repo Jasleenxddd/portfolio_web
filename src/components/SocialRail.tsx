@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Mail, Trophy } from "lucide-react";
+import { Github, Linkedin, Mail, Trophy } from "lucide-react";
 
 const socialLinks = [
   {
@@ -10,11 +10,6 @@ const socialLinks = [
     label: "GitHub",
     href: "https://github.com/Jasleenxddd",
     icon: Github,
-  },
-  {
-    label: "LeetCode",
-    href: "https://leetcode.com/u/jaslleenkaur/",
-    icon: Code2,
   },
   {
     label: "Codeforces — Expert (1742)",
